@@ -1,0 +1,44 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+}
+
+#navbar h2 a {
+  color: #f7d354;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+}
+
+/* Estilização para o formulário de busca que deve estar dentro do id navbar */
+#navbar form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#navbar input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+#navbar button {
+  background-color: #f7d354;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#navbar button:hover {
+  background-color: #ffbb00;
+}

@@ -1,0 +1,59 @@
+:root {
+  --main-bg: #000;
+  --card-bg: #1a1a1a;
+  --text-color: #fff;
+  --accent-color: #f7d354; /* Amarelo tipo cinema */
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: Helvetica, sans-serif;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  width: 30%;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.movie-card h2, .movie-card p, .movie-card a {
+  margin-bottom: 1rem;
+}
+
+.movie-card a {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  color: #000;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.movie-card a:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+}

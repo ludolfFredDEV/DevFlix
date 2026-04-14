@@ -1,0 +1,172 @@
+.movie-page {
+  max-width: 1200px; /* Aumentamos de 800px para 1200px */
+  margin: 2rem auto;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para quando o MovieCard estiver dentro desta página */
+.movie-page .movie-card {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.movie-page .movie-card img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #f7d354;
+  margin-bottom: 2rem;
+}
+
+.info {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  background-color: #262626;
+  border-left: 4px solid #f7d354;
+  border-radius: 5px;
+}
+
+.info h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #f7d354;
+  font-size: 1.1rem;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.description {
+  background-color: transparent;
+  border-left: none;
+  padding: 0;
+}
+
+.description p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Container pai para permitir o fundo absoluto */
+.movie-page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* A imagem de fundo */
+.backdrop {
+  position: fixed; /* Fica parado enquanto você rola */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh; /* Ocupa boa parte da tela */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Fica atrás de tudo */
+  opacity: 0.3; /* Deixa bem sutil */
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* Ajuste na movie-page para não colar no topo */
+.movie-page {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(26, 26, 26, 0.85); /* Fundo semi-transparente para ler melhor */
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco moderno */
+  margin-top: 15vh; /* Empurra o conteúdo para baixo da imagem */
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.trailer-container {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.trailer-container h3 {
+  margin-bottom: 1.5rem;
+  color: #f7d354;
+}
+
+.trailer-container iframe {
+  border-radius: 12px;
+  border: none;
+}
+
+/* Coloca Pôster e Trailer lado a lado */
+.movie-header {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.poster-column {
+  flex: 1;
+  max-width: 300px;
+}
+
+.trailer-column {
+  flex: 3;
+  width: 100%;
+}
+
+.trailer-column iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantém o formato wide do cinema */
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Coloca as 3 infos (Orçamento, Receita, Duração) em colunas */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Ajuste para telas de celular */
+@media (max-width: 768px) {
+  .movie-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr; /* Volta a ser uma lista no celular */
+  }
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem; /* Espaço maior depois do trailer */
+}
+
+.info p {
+  font-size: 1.4rem; /* Números maiores para facilitar a leitura */
+}
