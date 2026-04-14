@@ -44,7 +44,7 @@ O **DevFlix** é uma aplicação web moderna para consulta de filmes, utilizando
     npm run dev
 
 ✒️ Autor
-Desenvolvido por João Frederico Fernandes Ludolf – Seu LinkedIn
+Desenvolvido por João Frederico Fernandes Ludolf – (https://github.com/ludolfFredDEV/)
 
 ## 🆕 Próximas Implementações (Roadmap)
 - [ ] Implementar **Lista de Favoritos** usando LocalStorage.
